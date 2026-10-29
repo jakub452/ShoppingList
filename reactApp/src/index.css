@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+  --bg: #F4F3EE;
+  --surface: #FFFFFF;
+  --border: #E3E1D9;
+  --border-dashed: #D6D3C8;
+  --text: #1C1C1A;
+  --text-muted: #5E5D57;
+  --text-done: #6E6C65;
+  --icon: #8A887F;
+  --accent: #2F6B4F;
+  --accent-hover: #1F4A36;
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Manrope";
+}

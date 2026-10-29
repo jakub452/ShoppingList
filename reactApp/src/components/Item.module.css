@@ -1,0 +1,52 @@
+.itemContainer{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    
+    border: 1px var(--border) solid;
+    border-radius: 16px;
+    background-color: var(--surface);
+}
+.itemCheckbox{
+    width: 1.3rem;
+    height: 1.3rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+.itemName{
+    font-size: 1.1rem;
+    width: 80%;
+}
+
+.itemAmmountContainer{
+    width: 25%;
+    display: flex;
+    background-color: var(--bg);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.itemAmmountNumber{
+    width: 33%;
+    margin: 0.5rem;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+.itemAmmountButton{
+    width: 33%;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: var(--bg);
+}
+.itemDelete{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: var(--text-muted);
+    height: 100%;
+    margin: 1rem;
+    background-color: transparent;
+}

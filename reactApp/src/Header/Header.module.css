@@ -1,0 +1,81 @@
+.headerContainer{
+    display: flex;
+    flex-direction: column;
+
+    align-self: flex-start;
+    justify-self: start;
+
+    overflow: hidden;
+}
+.headerSubTitle{
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: var(--accent);
+}
+.headerTitle{
+    margin: 0;
+    font-weight: bolder;
+}
+.headerPara{
+    margin: 0;
+    color: var(--text-muted);
+}
+
+.inputContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 16px;
+    border: 1px var(--border) solid;
+    background-color: var(--surface);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.inputText{
+    width: 70%;
+    border: none;
+    font-size: 1.1rem;
+    background-color: transparent;
+    padding: 1rem;
+}
+.inputText:focus{
+    border: none;
+    outline: none;
+}
+.inputNumber{
+    border-radius: 6px;
+    border: 1px var(--border) solid;
+    background-color: var(--bg);
+
+    text-align: center;
+
+    height: 70%;
+    width: 40%;
+}
+.inputNumber:focus{
+    outline: none;
+}
+.inputButton{
+    background-color: var(--accent);
+    color: var(--surface);
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 6px;
+
+    width: 60%;
+    margin: 10px;
+    height: 70%;
+}
+.inputControlers{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+.inputButton:focus{
+    outline: none;
+}
