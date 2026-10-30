@@ -19,7 +19,7 @@ const Header = () => {
       <div className={styles.inputContainer}>
         <input type="text" name="itemName" id="itemName" placeholder='Co trzeba kupić?' className={styles.inputText} />
         <div className={styles.inputControlers}>
-          <input type="number" min={1} max={999} name="itemNumber" id="itemNumber" className={styles.inputNumber} />
+          <input type="number" min={1} max={999} placeholder='1' name="itemNumber" id="itemNumber" className={styles.inputNumber} />
           <input type="button" value="+ Dodaj" className={styles.inputButton} />
         </div>
       </div>

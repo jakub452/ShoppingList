@@ -68,6 +68,8 @@
     width: 60%;
     margin: 10px;
     height: 70%;
+    
+    cursor: pointer;
 }
 .inputControlers{
     width: 33%;
