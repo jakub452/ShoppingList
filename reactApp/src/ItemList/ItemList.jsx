@@ -19,7 +19,7 @@ const ItemList = () => {
       <div className={styles.itemList}>
         {
           items.map((item) => (
-            <Item key={item.id} name={item.name} ammount={item.ammount}/>
+            <Item key={item.id} name={item.name} ammount={item.amount}/>
           ))
         }
       </div>

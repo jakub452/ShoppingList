@@ -1,17 +1,14 @@
 import { Router } from "express";
-
+import db from '../db/index.js'
 const router = Router();
 
-let items = [
-    { id: 1, name: 'Jajka', ammount: 10, bought: false },
-    { id: 2, name: 'Mleko', ammount: 6, bought: false },
-    { id: 3, name: 'Chleb', ammount: 9, bought: false },
-    { id: 4, name: 'Mienso', ammount: 7, bought: false },
-]
+
 
 router.get('/', (req, res) => {
+    const items = db.prepare('SELECT * FROM items').all();
     res.json(items);
 });
+
 
 router.get('/:id', (req, res) => {
     const id = Number(req.params.id)
