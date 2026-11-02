@@ -1,25 +1,21 @@
-import { useEffect, useState } from "react";
 import Item from "../components/Item";
 import styles from "./ItemList.module.css";
 
-const ItemList = () => {
-  const [items, setItems] = useState([]);
 
-  useEffect(() => {
-    fetch("/api/items")
-      .then((res) => res.json())
-      .then((data) => {
-        setItems(data);
-      });
-  }, []);
+const ItemList = ({ itemList, updateListCallback }) => {
+
+  const deleteItem = (id) => {
+    fetch(`/api/items/${id}`, { method: 'DELETE' })
+    updateListCallback()
+  }
 
   return (
     <div className={styles.itemListContainer}>
       <div className={styles.itemListTitle}>do kupienia</div>
       <div className={styles.itemList}>
         {
-          items.map((item) => (
-            <Item key={item.id} name={item.name} ammount={item.amount}/>
+          itemList.map((item) => (
+            <Item key={item.id} name={item.name} ammount={item.amount} deleteItem={() => deleteItem(item.id)}/>
           ))
         }
       </div>
