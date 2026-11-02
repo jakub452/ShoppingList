@@ -1,8 +1,7 @@
 import { Router } from "express";
 import db from '../db/index.js'
+
 const router = Router();
-
-
 
 router.get('/', (req, res) => {
     const items = db.prepare('SELECT * FROM items').all();
@@ -27,11 +26,11 @@ router.post('/', (req, res) => {
 
 router.patch('/:id', (req, res) => {
     const id = Number(req.params.id);
-    const { name, amount, bought } = req.body;
-
+    const { bought } = req.body;
+    
     const patch = db
-        .prepare('UPDATE items SET name = ?, amount = ?, bought = ? WHERE id = ?')
-        .run(name, amount, bought, id);
+        .prepare('UPDATE items SET bought = ? WHERE id = ?')
+        .run(bought, id);
 
     res.json(patch)
 })

@@ -12,7 +12,7 @@ function App() {
     fetch("/api/items")
       .then((res) => res.json())
       .then((data) => {
-      setItems(data);
+        setItems(data)
     })
   }
 
@@ -20,10 +20,13 @@ function App() {
     updateList()
   }, []);
 
+  const boughtItems = items.filter((item) => item.bought === 1)
+  const toBuyItems = items.filter((item) => item.bought === 0)
+
   return (
     <main>    
       <Header updateListCallback={updateList}/>
-      <ItemList itemList={items} updateListCallback={updateList}/>
+      <ItemList itemList={toBuyItems} boughtItems={boughtItems} updateListCallback={updateList}/>
     </main>
   )
 }
