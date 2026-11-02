@@ -38,7 +38,9 @@ router.patch('/:id', (req, res) => {
 
 router.get('/:id', (req, res) => {
     const id = Number(req.params.id)
-    const item = items.find(i => i.id === id)
+    const item = db
+        .prepare('SELECT * FROM items WHERE id = ?')
+        .get(id);
     if(!item) res.status(404).json({ error: "Nie znaleziono produktu" })
     res.json(item)
 })
