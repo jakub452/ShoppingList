@@ -15,10 +15,17 @@ const ItemList = ({ itemList, updateListCallback }) => {
       <div className={styles.itemList}>
         {
           itemList.map((item) => (
-            <Item key={item.id} name={item.name} ammount={item.amount} deleteItem={() => deleteItem(item.id)}/>
+            <Item 
+            key={item.id} 
+            name={item.name} 
+            ammount={item.amount} 
+            deleteItem={() => deleteItem(item.id)} 
+            updateItemCallback={updateListCallback}
+            />
           ))
         }
       </div>
+      {/* <div className="">kupione</div> */}
     </div>
   );
 };

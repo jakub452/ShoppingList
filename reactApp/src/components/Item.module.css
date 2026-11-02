@@ -1,52 +1,61 @@
 .itemContainer{
-    width: 100%;
-
     display: flex;
     align-items: center;
-    
-    border: 1px var(--border) solid;
-    border-radius: 16px;
+    justify-content: center;
+    width: 100%;
+
     background-color: var(--surface);
+    border-radius: 16px;
 }
 .itemCheckbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 100%;
+}
+.itemCheckbox input{
     width: 1.3rem;
     height: 1.3rem;
-    margin: 1rem;
+}
+.itemCheckbox input:hover{
     cursor: pointer;
 }
 .itemName{
-    font-size: 1.1rem;
-    width: 80%;
-}
-
-.itemAmmountContainer{
-    width: 25%;
+    width: 70%;
     display: flex;
-    background-color: var(--bg);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.itemAmmountNumber{
-    width: 33%;
-    margin: 0.5rem;
-    text-align: center;
-    font-size: 0.95rem;
+    align-items: center;
+    justify-content: start;
     font-weight: bold;
 }
-.itemAmmountButton{
-    width: 33%;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    background-color: var(--bg);
+.itemAmount{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background-color: var(--accent);
+    color: white;
+    padding: 5px;
 }
-.itemDelete{
-    cursor: pointer;
-    border: none;
-    outline: none;
-    color: var(--text-muted);
+.itemTrashbin{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.itemTrashbin svg{
     height: 100%;
-    margin: 1rem;
-    background-color: transparent;
+    width: 1.7rem;
+    padding: 2px;
+}
+
+.itemTrashbin button{
+    outline: none;
+    border: none;
+    border-radius: 16px;
+}
+.itemTrashbin button:hover{
+    background-color: rgba(255, 0, 0, 0.64);
+    cursor: pointer;
 }

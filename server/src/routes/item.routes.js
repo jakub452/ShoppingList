@@ -25,6 +25,17 @@ router.post('/', (req, res) => {
     res.json(create)
 })
 
+router.patch('/:id', (req, res) => {
+    const id = Number(req.params.id);
+    const { name, amount, bought } = req.body;
+
+    const patch = db
+        .prepare('UPDATE items SET name = ?, amount = ?, bought = ? WHERE id = ?')
+        .run(name, amount, bought, id);
+
+    res.json(patch)
+})
+
 router.get('/:id', (req, res) => {
     const id = Number(req.params.id)
     const item = items.find(i => i.id === id)

@@ -8,7 +8,6 @@ import { useEffect, useState } from "react"
 function App() {
   const [items, setItems] = useState([])
 
-
   const updateList = () => {
     fetch("/api/items")
       .then((res) => res.json())
